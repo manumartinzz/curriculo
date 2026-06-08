@@ -19,11 +19,11 @@ function switchTab(tab) {
 
 // Element SDK (mantido para compatibilidade com Canva ou similar)
 const defaultConfig = {
-  full_name: 'Seu Nome Completo',
-  phone: '(00) 00000-0000',
-  email: 'seu@email.com',
-  address: 'Sua cidade/estado',
-  age: '-- anos',
+  full_name: 'Emanuelle Martins de Arruda',
+  phone: '(41) 99636-6813',
+  email: 'manucordeiro326@gmail.com',
+  address: 'Av. das Nações - numero 31 - Estação - Araucária/PR',
+  age: '17 anos',
   education_1: 'Cursando o terceiro ano do ensino médio com técnico integrado de análise de desenvolvimento de sistemas - Júlio Szymanski',
   education_2: 'Curso Senac - Informática Básica (96h)',
   education_3: '',
