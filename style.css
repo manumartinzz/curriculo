@@ -117,7 +117,7 @@ body {
 .gallery-slot {
   width: 100%;
   aspect-ratio: 1;
-  border: 2px dashed rgba(168, 85, 247, 0.4);
+  border: 2px solid rgba(168, 85, 247, 0.6);
   border-radius: 12px;
   display: flex;
   align-items: center;
