@@ -121,14 +121,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   background: rgba(168, 85, 247, 0.05);
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 
 .gallery-slot:hover {
   border-color: #c084fc;
   background: rgba(168, 85, 247, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.4);
 }
 
 .gallery-slot img {
@@ -136,32 +140,17 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-slot:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-slot {
-  width: 100%;
-  aspect-ratio: 1;
-  border: 2px solid rgba(168, 85, 247, 0.6);
-  border-radius: 12px;
+/* Modal Styling */
+#imageModal.active {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(168, 85, 247, 0.05);
-  overflow: hidden;
-  position: relative;
+  animation: modalFadeIn 0.3s ease forwards;
 }
 
-.gallery-slot:hover {
-  border-color: #c084fc;
-  background: rgba(168, 85, 247, 0.15);
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
-  z-index: 10;
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .glow-pulse {

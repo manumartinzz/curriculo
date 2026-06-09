@@ -67,3 +67,28 @@ tabs.forEach((btn) => {
 if (window.lucide) {
   lucide.createIcons();
 }
+
+// Image Modal Logic
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeModal = document.getElementById('closeModal');
+
+document.querySelectorAll('.gallery-slot img').forEach(img => {
+  img.parentElement.addEventListener('click', () => {
+    modal.classList.add('active');
+    modal.classList.remove('hidden');
+    modalImg.src = img.src;
+    document.body.style.overflow = 'hidden'; // Previne scroll
+  });
+});
+
+const handleClose = () => {
+  modal.classList.remove('active');
+  modal.classList.add('hidden');
+  document.body.style.overflow = 'auto'; // Restaura scroll
+};
+
+closeModal.addEventListener('click', handleClose);
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) handleClose();
+});

@@ -13,6 +13,16 @@
   </head>
 
   <body class="h-full">
+    <!-- Image Modal (Instagram style) -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-[#1a1025]/90 backdrop-blur-lg transition-all duration-300">
+      <button id="closeModal" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors">
+        <i data-lucide="x" class="w-10 h-10"></i>
+      </button>
+      <div class="max-w-[90%] max-h-[90%] flex items-center justify-center">
+        <img id="modalImage" src="" alt="Visualização" class="max-w-full max-h-full object-contain rounded-xl shadow-2xl border border-purple-500/30">
+      </div>
+    </div>
+
     <div id="app" class="h-full w-full overflow-auto">
       <!-- Navigation -->
       <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#1a1025]/80 border-b border-purple-900/30">
